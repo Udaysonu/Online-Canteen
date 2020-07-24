@@ -1,6 +1,6 @@
 const passport=require('passport');
 const LocalStrategy=require('passport-local').Strategy;
-const User=require('../model');
+const User=require('../models/userSchema');
 const nodemailer=require('../mailer/new_account_mailer')
 passport.use(new LocalStrategy(
     {passReqToCallback:true},

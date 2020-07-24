@@ -9,8 +9,8 @@ const local_strategy=require('./config/passport_local_strategy');
 var session = require("express-session");
 const cookieParser=require('cookie-parser');
 var flash=require('connect-flash');
-var server = require('http').Server(app)
-var io = require('./config/chatSocket').socketserver(server);
+// var server = require('http').Server(app)
+// var io = require('./config/chatSocket').socketserver(server);
 app.use(layouts );
 app.set('view engine','ejs');
 app.set('views',path.join(__dirname,'/views'));
@@ -33,13 +33,7 @@ app.use(require('./middleware/flashmiddleware').setflash)
 
 
 
-server.listen(300,function(err){
-    if(err){
-        console.log('Err in socket server',err)
-        return
-    }
-    return console.log('Socket server started');
-})
+ 
 app.use('/',require('./routes/index'));
  
 
