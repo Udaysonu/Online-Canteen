@@ -6,8 +6,8 @@ module.exports.transporter=nodemailer.createTransport({
     port:587,
     secure:false,
     auth:{
-        user:"udaysonubakka1jhjkjhk23@gmail.com",
-        pass:"udayyahhhjhkjhkhjkhjkjhkhjdusonu1"
+        user:"ahjdfhkad@gmail.com",
+        pass:"asdfasdf"
     }
 
 
